@@ -5,6 +5,7 @@ package dev.kokeneko.nyustproject
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.core.animate
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -102,6 +103,7 @@ fun BottomNav() {
             ){
                 bottomNavItems.forEach { item ->
                     NavigationBarItem(
+                        alwaysShowLabel = false,
                         icon = {
                             Icon(
                                 imageVector = item.icon,
